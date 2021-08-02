@@ -1,5 +1,7 @@
 # Usefull prebuild script and functions for react native 
 
+# COMING SOON
+
 # Installation
 
 `yarn add react-native-chz `
