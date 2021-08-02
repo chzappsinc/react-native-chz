@@ -7,7 +7,7 @@
 -----
 ## Functions 
 - [randomUUID](#randomuuid)
-- [getOTP](#randomotp)
+- [getOTP](#getotp)
 
 ## randomUUID 
 
