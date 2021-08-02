@@ -8,6 +8,7 @@
 ## Functions 
 - [randomUUID](#randomuuid)
 - [getOTP](#getotp)
+- [getDimensions](#getDimensions)
 
 ## randomUUID 
 
@@ -55,4 +56,33 @@ export default App
 OUTPUT 
 Rnadom OTP : 98541253
 */
+```
+
+## getDimensions
+
+| PARAMS        | RETURN TYPE                                                      | PROPS |
+|---------------|------------------------------------------------------------------|-------|
+| window-width  | Number  Get width of current window                              |       |
+| window-height | Number Get Height of current window exclude statusBar and NavBar |       |
+| screen-height | Number  Get Device Screen Height                                 |       |
+| screen -width | Number Get Device Screen Width                                   |       |
+| font-scale    | get Font scale                                                   |       |
+
+```js
+
+import React, { useEffect, useState } from 'react'
+import { ScrollView, Text } from 'react-native'
+import chz from './libs'
+
+const App = () => {
+
+  return (
+    <ScrollView style={{ margin: 30 }}>
+      <Text>{chz.getDimensions('window-height')}</Text>
+    </ScrollView>
+  )
+}
+
+export default App
+
 ```
