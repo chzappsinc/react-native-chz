@@ -1,0 +1,49 @@
+{
+  "name": "react-native-chz",
+  "title": "A complete module for react-native",
+  "version": "1.0.0",
+  "description": "React native chz is a complete module for react native with all functions in one-line",
+  "main": "index.ts",
+  "files": [
+    "README.md",
+    "index.ts",
+    "index.d.ts",
+    ".chzapps",
+    ".tree",
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chzappsinc/react-native-funnel-chart.git",
+    "baseUrl": "https://github.com/chzappsinc/react-native-funnel-chart/"
+  },
+  "keywords": [
+    "react-native-chz",
+    "react native funnel chart",
+    "chzapps library",
+    "react native chart",
+    "react native easy chart funnel"
+  ],
+  "author": "Jasim T K <support@chzapps.com>",
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "dependencies": {
+    "axios": "^1.2.2",
+    "loadsh": "^0.0.4"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.1",
+    "react-native": ">=0.60.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "react": "^18.0.0",
+    "react-native": "^0.69.4"
+  },
+  "bugs": {
+    "url": "https://github.com/chzappsinc/react-native-funnel-chart/issues"
+  },
+  "homepage": "https://github.com/chzappsinc/react-native-funnel-chart#readme"
+}
