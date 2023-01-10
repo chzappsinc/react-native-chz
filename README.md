@@ -40,14 +40,14 @@ const getRandomPhotos = async () => {
 ```
 Available params
 
-| PARAMS        | DESCRIPITON                                                    | REQUIRED|
-|---------------|------------------------------------------------------------------|-------|
-| url  | Url with endpoints for network requesting                          |    true   |
-| method | Request methods   |   false    |
-| body | request body                                 |   false    |
-| headers| Request headers                                   |     false  |
-| contentType   | Request content type                                             |  false     |
-|authorization|Request Authorization|false|
+| PARAMS        | DESCRIPITON                               | REQUIRED |
+| ------------- | ----------------------------------------- | -------- |
+| url           | Url with endpoints for network requesting | true     |
+| method        | Request methods                           | false    |
+| body          | request body                              | false    |
+| headers       | Request headers                           | false    |
+| contentType   | Request content type                      | false    |
+| authorization | Request Authorization                     | false    |
 
 *Send tokens through authorization if you don't want to use headers.*
 
@@ -78,14 +78,14 @@ https://is.gd/6ycptD
 ```
 Available params
 
-| PARAMS        | DESCRIPITON                                                    | REQUIRED|
-|---------------|------------------------------------------------------------------|-------|
-| url  | Url with endpoints for network requesting                          |    true   |
-| method | Request methods   |   false    |
-| body | request body                                 |   false    |
-| headers| Request headers                                   |     false  |
-| contentType   | Request content type                                             |  false     |
-|authorization|Request Authorization|false|
+| PARAMS        | DESCRIPITON                               | REQUIRED |
+| ------------- | ----------------------------------------- | -------- |
+| url           | Url with endpoints for network requesting | true     |
+| method        | Request methods                           | false    |
+| body          | request body                              | false    |
+| headers       | Request headers                           | false    |
+| contentType   | Request content type                      | false    |
+| authorization | Request Authorization                     | false    |
 
 *Send tokens through authorization if you don't want to use headers.*
 
