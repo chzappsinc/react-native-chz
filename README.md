@@ -1,93 +1,96 @@
 # Usefull prebuild script and functions for react native
 
-# COMING SOON
-
 # Installation
 
 `yarn add react-native-chz`
 
 -----
+- [Networking](#network)
+- [Short Url](#short-url)
+-----
 
-## Functions
+## Network 
 
-- [randomUUID](#randomuuid)
-- [getOTP](#getotp)
-- [getDimensions](#getDimensions)
+**Make network calling easy and fast! with one line**
 
-## randomUUID
+<details>
 
-```js
-import React from 'react'
-import { Text, View } from 'react-native'
-import chz from 'react-native-chz'
-
-const App = () => {
-  return (
-    <View style={{ margin: 30 }}>
-      <Text>Random UUID : {chz.randomUUID()}</Text>
-    </View>
-  )
-}
-export default App
-
-/*
-OUTPUT 
-Rnadom UUID : 51b343be-ce73-4e3d-a0ae-46ab9a44c38e
-*/
-```
-
-## getOTP
-
-OTP value -> 4,6,8
+### Make Network call
 
 ```js
-import React from 'react'
-import { Text, View } from 'react-native'
-import chz from 'react-native-chz'
-
-
-const App = () => {
-  const OTP = chz.getOTP(8)
-  return (
-    <View style={{ margin: 30 }}>
-      <Text>Random OTP : {OTP}</Text>
-    </View>
-  )
-}
-
-export default App
-
-/*
-OUTPUT 
-Rnadom OTP : 98541253
-*/
+const getRandomPhotos = async () => {
+    const response = await makeNetworkCall({
+      ulr: 'https://jsonplaceholder.typicode.com/photos',
+    });
+    console.log(response.data);
+  };
+  getRandomPhotos();
+  
 ```
+**Output**
+```json
+[
+  {
+    "albumId": 1,
+    "id": 1,
+    "title": "accusamus beatae ad facilis cum similique qui sunt",
+    "url": "https://via.placeholder.com/600/92c952",
+    "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+  },...+4999]
+```
+Available params
 
-## getDimensions
-
-| PARAMS        | RETURN TYPE                                                      | PROPS |
+| PARAMS        | DESCRIPITON                                                    | REQUIRED|
 |---------------|------------------------------------------------------------------|-------|
-| window-width  | Number  Get width of current window                              |       |
-| window-height | Number Get Height of current window exclude statusBar and NavBar |       |
-| screen-height | Number  Get Device Screen Height                                 |       |
-| screen -width | Number Get Device Screen Width                                   |       |
-| font-scale    | get Font scale                                                   |       |
+| url  | Url with endpoints for network requesting                          |    true   |
+| method | Request methods   |   false    |
+| body | request body                                 |   false    |
+| headers| Request headers                                   |     false  |
+| contentType   | Request content type                                             |  false     |
+|authorization|Request Authorization|false|
+
+*Send tokens through authorization if you don't want to use headers.*
+
+##### Available Methods
+
+`'get' | 'post' | 'put' | 'delete' | 'options' | 'patch' | 'head'`
+</details>
+
+--------------
+
+## Short Url 
+
+**Create Short Url fast and unlimited**
+
+<details>
+
+### Create short url 
 
 ```js
-
-import React, { useEffect, useState } from 'react'
-import { ScrollView, Text } from 'react-native'
-import chz from './libs'
-
-const App = () => {
-
-  return (
-    <ScrollView style={{ margin: 30 }}>
-      <Text>{chz.getDimensions('window-height')}</Text>
-    </ScrollView>
-  )
-}
-
-export default App
-
+ await makeShortUrl({
+      url: 'https://chzapps.com',
+      provider: 'is.gd',
+    });
 ```
+**Output**
+```json
+https://is.gd/6ycptD
+```
+Available params
+
+| PARAMS        | DESCRIPITON                                                    | REQUIRED|
+|---------------|------------------------------------------------------------------|-------|
+| url  | Url with endpoints for network requesting                          |    true   |
+| method | Request methods   |   false    |
+| body | request body                                 |   false    |
+| headers| Request headers                                   |     false  |
+| contentType   | Request content type                                             |  false     |
+|authorization|Request Authorization|false|
+
+*Send tokens through authorization if you don't want to use headers.*
+
+##### Available Methods
+
+`'get' | 'post' | 'put' | 'delete' | 'options' | 'patch' | 'head'`
+</details>
+
